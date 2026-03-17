@@ -7,6 +7,9 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Mainlayout from "./layouts/MainLayout.jsx";
+import AuthLayout from "./layouts/authlayout.jsx";
+import Login from "./pages/login.jsx";
+import Register from "./pages/Register.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,7 +21,14 @@ createRoot(document.getElementById("root")).render(
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
+
+        <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+        </Route>
       </Routes>
+
+    
     </BrowserRouter>
   </StrictMode>,
 );
