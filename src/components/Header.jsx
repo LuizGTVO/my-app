@@ -27,6 +27,13 @@ function header() {
         <NavLink to="/app" className={LinkClass}>
           App
         </NavLink>
+        <NavLink to="/produto/:slug" className={LinkClass}>
+          Produto
+        </NavLink>
+        
+        <NavLink to="/login" className={LinkClass}>
+          <UserRound className="inline fill-amber-500 stroke-black stroke-2 " />
+        </NavLink>
       </div>
     </header>
   );
